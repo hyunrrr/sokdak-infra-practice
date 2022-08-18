@@ -1,5 +1,9 @@
 package com.practice;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.InstanceOfAssertFactories.LOCAL_DATE_TIME;
+
+import java.time.LocalDateTime;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,5 +18,19 @@ class TempTest {
     @Test
     void test2() {
         System.out.println("hi");
+    }
+
+    @DisplayName("임시테스트 3")
+    @Test
+    void test3() {
+        System.out.println("hello");
+    }
+
+    @DisplayName("timezone 확인 테스트")
+    @Test
+    void test4() {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+        assertThat(now).isEqualTo("1991-01-01");
     }
 }
