@@ -9,4 +9,10 @@ class TempTest {
     @Test
     void test() {
     }
+
+    @DisplayName("임시테스트 2")
+    @Test
+    void test2() {
+
+    }
 }
