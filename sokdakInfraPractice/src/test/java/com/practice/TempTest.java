@@ -27,12 +27,4 @@ class TempTest {
     void test3() {
         System.out.println("hello");
     }
-
-    @DisplayName("timezone 확인 테스트")
-    @Test
-    void test4() {
-        String formatDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH"));
-        System.out.println(formatDate);
-        assertThat(formatDate).isEqualTo(LocalDateTime.now().format(DateTimeFormatter.ofPattern("2022-08-18-14")));
-    }
 }
