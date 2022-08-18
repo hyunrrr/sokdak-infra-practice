@@ -15,4 +15,10 @@ class TempTest {
     void test2() {
         System.out.println("hi");
     }
+
+    @DisplayName("임시테스트 3")
+    @Test
+    void test3() {
+        System.out.println("hello");
+    }
 }
