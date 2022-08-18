@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.InstanceOfAssertFactories.LOCAL_DATE_TIME;
 
 import java.time.LocalDateTime;
+import net.bytebuddy.asm.Advice.Local;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +32,6 @@ class TempTest {
     void test4() {
         LocalDateTime now = LocalDateTime.now();
         System.out.println(now);
-        assertThat(now).isEqualTo("1991-01-01");
+        assertThat(now).isEqualTo(LocalDateTime.of(01, 01, 01, 01, 01));
     }
 }
